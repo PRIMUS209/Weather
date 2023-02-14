@@ -1,20 +1,18 @@
 import React from "react";
 
-const Weather = props =>  (
-      <div className="infoWeath">
-      { props.city &&
+const Weather = (props) => (
+  <div className="infoWeath">
+    {props.city && (
       <div>
-        <p> Местоположение: {props.city}, {props.country} </p>
-        <p> Температура: {props.temp} C</p>
-        <p> Скорость ветра: {props.wind} m/s</p>
-        <p> Видимость: {props.visibility} m </p>
-        <p> Давление Воздуха: {props.pressure} Pa</p>
+        <p>{`Location: ${props.city}, ${props.country}`}</p>
+        <p>{`Temperature: ${props.temp} C`}</p>
+        <p>{` Wind speed: ${props.wind} m/s`}</p>
+        <p>{`Visibility: ${props.visibility} m `}</p>
+        <p> {`Air pressure: ${props.pressure} Pa`}</p>
       </div>
-  }
-  <p className="error">{ props.error }</p>
-      </div>
-    );
-
-
+    )}
+    <p className="error">{props.error}</p>
+  </div>
+);
 
 export default Weather;
